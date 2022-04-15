@@ -1,0 +1,14 @@
+version: '4.1.1'
+services:
+  dev-db:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=db
+    ports:
+      - "5432:5432"
+    networks:
+      - crud
+networks:
+  crud:
